@@ -36,6 +36,14 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
+  "MONGODB_URL": {
+      "description": "Database url from mondb website.",
+      "value": ""
+    },
+  "WORK_CHAT": {
+      "description": "Channel id for bot working.",
+      "value": ""
+    },
   "addons": [
   ],
   "buildpacks": [{
