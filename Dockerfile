@@ -6,7 +6,6 @@ ENV TZ=Asia/Kolkata
 RUN apt -qq update --fix-missing && \
     apt -qq install -y git \
     python3 \
-    ffmpeg \
     python3-pip
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
