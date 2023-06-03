@@ -10,15 +10,11 @@ class Config(object):
     APP_ID = int(os.environ.get("APP_ID", 1725988))
     API_HASH = os.environ.get("API_HASH", "35b829bed9b38bb0a5e8079e777277cf")
     # Get these values from my.telegram.org
-    # Array to store users who are authorized to use the bot
     # Banned Unwanted Members..
-    PORT = os.environ.get("PORT", "8080")
-    myclient = pymongo.MongoClient("mongodb+srv://CaptionRemover:CaptionRemover@cluster0.h5m1p3w.mongodb.net/?retryWrites=true&w=majority")
+    MONGODB_URL = os.environ.get("MONGODB_URL", "")
+    myclient = pymongo.MongoClient(str(MONGODB_URL))
     mydb = myclient["mutelist"]
     MUTEDB = mydb["words"]
     NOCAPDB = mydb["nocapdb"]
     LINKDB = mydb["linkdb"]
-    WORK_CHAT = -1001988780014
-    MUTE = ["Ashwin"]
-    NOCAP = "True"
-    LINKMODE = "True"
+    WORK_CHAT = os.environ.get("WORK_CHAT", "-1001988780014")
