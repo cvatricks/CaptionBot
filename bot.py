@@ -9,8 +9,6 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 import os
-from aiohttp import *
-from web import *
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -29,7 +27,7 @@ class Bot(Client):
     )
     def __init__(self):
         super().__init__(
-            name="AnyDLBot",
+            name="CaptionBot",
             api_id=Config.APP_ID,
             api_hash=Config.API_HASH,
             bot_token=Config.TG_BOT_TOKEN,
