@@ -1,22 +1,19 @@
 {
-  "name": "File converter",
+  "name": "Caption Changer Bot",
   "description": "Telegram's best Open Source ALL-In-One Multi Purpose RoBot. Create your Fork now.",
   "keywords": [
     "telegram",
     "best",
-    "youtube",
-    "downloader",
     "open",
     "source",
     "multi",
     "purpose",
-    "ffmpeg",
-    "remote",
-    "uploader"
+    "caption",
+    "remote"
   ],
-  "success_url": "https://telegram.dog/AnyDLBot",
-  "website": "https://github.com/SpEcHiDe/AnyDLBot",
-  "repository": "https://github.com/SpEcHiDe/AnyDLBot",
+  "success_url": "https://telegram.dog/Super_Botz",
+  "website": "https://github.com/CvaTricks",
+  "repository": "https://github.com/cvatricks/CaptionBot",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -39,21 +36,9 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "AUTH_USERS": {
-      "description": "allow only pre-defined users to use this bot",
-      "value": "7351948 20516707 23122162 500346573"
-    },
-    "BANNED_USERS": {
-      "description": "Banned Unwanted members..",
-      "value": "",
-      "required": false
-    }
-  },
   "addons": [
   ],
   "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
     "url": "heroku/python"
   }],
   "formation": {
