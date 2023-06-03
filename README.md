@@ -1,4 +1,4 @@
-## [Anydl Robot](https://telegram.dog/Anydl)
+## [Caption Bot](https://telegram.dog/Super_Botz)
 ---
 
 An Open Source Telegram RoBot  😍
@@ -15,17 +15,18 @@ An Open Source Telegram RoBot  😍
 
 ## Our Telegram Channel and Group
 
-* [Dx Bots Updates](https://telegram.dog/Dx_Botz)
+* [Bots Updates](https://telegram.dog/Super_Botz)
 
-* [InFoTel Group](https://telegram.dog/InFoTelGroup)
+* [Group](https://telegram.dog/Super_Botz_support)
 
 
 ### [@BotFather](https://telegram.dog/BotFather) Commands
 
 ```
-start - Check if the Bot is Online!
-help - How to use this Bot?
-upgrade - Upgrade your status
-converttovideo - Convert to Streamable Video
+mode - Enable / Disable captions
+link - Enable / Disable remove links from caption
+add - add word list to remove
+delete - delete word list to remove
+list - show word list
 ```
 
