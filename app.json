@@ -44,7 +44,7 @@
       "description": "Channel id for bot working.",
       "value": ""
     },
-  },
+  }
   "addons": [
   ],
   "buildpacks": [{
@@ -57,4 +57,4 @@
     }
   }
 }
-}
+
