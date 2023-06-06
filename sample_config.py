@@ -17,4 +17,4 @@ class Config(object):
     MUTEDB = mydb["words"]
     NOCAPDB = mydb["nocapdb"]
     LINKDB = mydb["linkdb"]
-    WORK_CHAT = os.environ.get("WORK_CHAT", "-1233445")
+    WORK_CHAT = int(os.environ.get("WORK_CHAT", "-1233445"))
