@@ -20,4 +20,4 @@ class Config(object):
     MUTEDB = mydb["words"]
     NOCAPDB = mydb["nocapdb"]
     LINKDB = mydb["linkdb"]
-    WORK_CHAT = [int(ch) if id_pattern.search(ch) else ch for ch in os.environ.get("WORK_CHAT", "-1233445").split(",")]
+    WORK_CHAT = [int(ch) if id_pattern.search(ch) else ch for ch in os.environ.get('WORK_CHAT', '0').split()]
