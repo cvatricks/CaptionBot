@@ -94,6 +94,9 @@ async def sendname(bot, update):
             updatedb = Config.NOCAPDB.update_one(oldupdate, updates)
             await update.reply_text("Filter mode de-activated, It means entire caption will be removed from media.")
             return
+       except UnboundLocalError:
+            newupdate = { "nocapdb": "True" }
+            updated = Config.NOCAPDB.insert_one(newupdate)
        except Exception as err:
             logger.info(err)
       if "/add" in update.text:
