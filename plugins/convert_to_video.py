@@ -76,6 +76,9 @@ async def sendname(bot, update):
             updatedb = Config.LINKDB.update_one(oldupdate, updates)
             await update.reply_text("Link mode activated, It means all the links will be removed from media.")
             return
+       except UnboundLocalError:
+            newupdate = { "linkdb": "True" }
+            updated = Config.LINKDB.insert_one(newupdate)
        except Exception as err:
            logger.info(err)
       if update.text == "/mode":
