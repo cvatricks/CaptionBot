@@ -152,7 +152,16 @@ async def sendname(bot, update):
          for list in Config.MUTEDB.find():
              list = list.get("word")
              words = words + list + "\n"
-         await update.reply_text("**Total Words : {}** \n\n{}".format(Config.MUTEDB.count_documents({}), words))
+         try:
+             await update.reply_text("**Total Words : {}** \n\n{}".format(Config.MUTEDB.count_documents({}), words))
+         except:
+             f = open("/presentlinks.txt", "w")
+             f.write("**Total Words : {}** \n\n{}".format(Config.MUTEDB.count_documents({}), words))
+             f.close()
+             await bot.send_document(
+                   chat_id = update.chat.id,
+                   document = "/presentlinks.txt"
+             )
          return
     except Exception as er:
         pass
