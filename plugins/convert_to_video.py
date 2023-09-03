@@ -60,6 +60,21 @@ async def convert_to_video(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.private)
 async def sendname(bot, update):
     try:
+      if update.text == "/delworkchat":
+       try:
+         workchat = { "workchat": "{}".format(update.reply_to_message.text) }
+         deleteworkchat = Config.WORKCHAT.delete_one(workchat)
+         await update.reply_text("Chat ID removed successfully. Bot restart required.")
+       except:
+         await update.reply_text("Reply with Chat id Eg. -100123456789")
+      if update.text == "/addworkchat":
+       try:
+         workchat = { "workchat": "{}".format(update.reply_to_message.text) }
+         updateworkchat = Config.WORKCHAT.insert_one(workchat)
+         await update.reply_text("Chat ID added successfully. Bot restart required.")
+       except:
+         await update.reply_text("Reply with Chat id Eg. -100123456789")
+         return
       if update.text == "/link":
        try:
          for linkdb in Config.LINKDB.find():
