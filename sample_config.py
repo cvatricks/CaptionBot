@@ -21,4 +21,4 @@ class Config(object):
     NOCAPDB = mydb["nocapdb"]
     LINKDB = mydb["linkdb"]
     WORKCHAT = mydb["workchat"]
-    WORK_CHAT = [int(ch.get("workchat")) if id_pattern.search(ch.get("workchat")) else ch.get("workchat") for ch.get("workchat") in Config.WORKCHAT.find()]
+    WORK_CHAT = [int(ch.get("workchat")) if id_pattern.search(ch.get("workchat")) else ch.get("workchat") for ch.get("workchat") in WORKCHAT.find()]
