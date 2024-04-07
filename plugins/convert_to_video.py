@@ -46,7 +46,7 @@ async def convert_to_video(bot, update):
         for linkdb in Config.LINKDB.find():
             linkdb = linkdb.get("linkdb")
         if linkdb == "True":
-           newcaption = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', newcaption, flags=re.MULTILINE)
+           newcaption = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', newcaption)
         msgid = update.id
         await bot.copy_message(
               chat_id = update.chat.id,
